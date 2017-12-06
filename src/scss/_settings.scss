@@ -1,0 +1,80 @@
+$the_darkes_blue: #0d0b11;
+$dark_blue: #161828;
+$gray_blue: #212331;
+$light_blue: #475a85;
+$blue: #506083;
+$red: #ea5b58;
+$dark_red: #c54d4b;
+$light_grey: #7b7b7b;
+$grey: #323232;
+$white: #fff;
+$dark_white: #b9b9ba;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+$open_sans: 'Open Sans', sans-serif;
+$regular: 400;
+$bold: 700;
+$biggest_title: 3rem;
+$big_title: 2.25rem;
+$title: 1.875rem;
+$big_subtitle: 1.5rem;
+$normal_text: 1.125rem;
+$small_text: 0.875rem;
+
+.link
+{
+	text-decoration: none;
+	color: inherit;
+}
+.centered
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.red-button
+{
+	@extend .centered;
+	@extend .link;
+	background: $red;
+	color: $white;
+	border-radius: 4px;
+	&:hover
+	{
+		background: $dark_red;
+	}
+}
+.text-center
+{
+	text-align: center;
+}
+.title
+{
+	font-size: $title;
+	font-weight: $bold;
+	margin: 0 0 1.25rem 0;
+}
+.big-title
+{
+	@extend .title;
+	font-size: $big_title;
+}
+.biggest-title
+{
+	@extend .title;
+	font-size: $biggest_title;
+	margin: 0 0 2rem 0;
+}
+.subtitle
+{
+	font-weight: $regular;
+	color: $white;
+	font-size: $normal_text;
+	margin: 0 0 1.5rem 0;
+}
+.big-subtitle
+{
+	@extend .subtitle;
+	font-size: $big_subtitle;
+	margin: 0;
+}

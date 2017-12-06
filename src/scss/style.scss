@@ -1,0 +1,181 @@
+@import "settings";
+
+.page
+{
+	margin: 0;
+	padding: 0;
+	font-family: $open_sans;
+}
+
+.main-header
+{
+	@extend .centered;
+	width: 100%;
+	height: 4.6875rem;
+	background-color: $the_darkes_blue;
+	color: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	.main-header__link
+	{
+		@extend .link;
+	}
+	.main-header__logo
+	{
+		font-size: $normal_text;
+		font-weight: $regular;
+	}
+	.main-header__logo--bold
+	{
+		font-weight: $bold;
+	}
+	.menu
+	{
+		display: flex;
+		justify-content: space-between;
+		width: 29.6875rem;
+		list-style-type: none;
+	}
+	.menu__link
+	{
+		@extend .link;
+		&:hover
+		{
+			color: $dark_white;
+		}
+	}
+
+}
+.home
+{
+	@extend .centered;
+	color: $white;
+	height: 29.5rem;
+	background-color: $dark_blue;
+	margin-top: 4.6875rem;
+
+	.home__content
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 84rem;
+	}
+	.home__text
+	{
+		height: 100%;
+		.home__title
+		{
+			@extend .biggest-title;
+			margin-bottom: 2.5rem;
+
+		}
+		.home__subtitle
+		{
+			@extend .big-subtitle;
+			margin-bottom: 4.375rem;
+		}
+	}
+	.home__rectangle
+	{
+		width: 32rem;
+		height: 25rem;
+		background: $white;
+	}
+	.home__button
+	{
+		@extend .red-button;
+		width: 9.0625rem;
+		height: 3.4375rem; 
+	}
+}
+.services
+{
+	display: grid;
+	grid-template-columns: auto repeat(4, 14.375rem) auto;
+	grid-column-gap: 4.375rem;
+	grid-template-rows: 10rem 20rem;
+	grid-row-gap: 4.375rem;
+	justify-items: center;
+	grid-template-areas: 
+		"header header header header header header"
+		". service--1 service--2 service--3 service--4 ."
+	;
+	background: $light_blue;
+	color: $white;
+	.services__header
+	{
+		@extend .text-center;
+		grid-area: header;
+		align-self: end;
+	}
+	.services__title
+	{
+		@extend .title;
+	}
+	.services__subtitle
+	{
+		@extend .subtitle;
+	}
+	.service
+	{
+		@extend .text-center;
+		.service__name
+		{
+			font-size: $normal_text;
+			font-weight: $bold;
+		}
+		.service__description
+		{
+			font-size: $small_text;
+			margin-bottom: 2rem;
+		}
+	}
+	.service__button
+	{
+		@extend .red-button;
+		width: 5.5rem;
+		height: 2rem;
+		margin: 0 auto;
+
+	}
+	.service--1
+	{	
+		grid-area: service--1;
+	}
+	.service--2
+	{
+		grid-area: service--2;
+	}
+	.service--3
+	{
+		grid-area: service--3;
+	}
+	.service--4
+	{
+		grid-area: service--4;
+	}
+	
+}
+.works
+{
+	@extend .centered;
+	@extend .text-center;
+	color: $white;
+	height: 26.5rem;
+	background: url('../img/works/background.png') bottom, #7b7b7b;
+	.works__title
+	{
+		@extend .biggest-title;
+	}
+	.works__subtitle
+	{
+		@extend .subtitle;
+	}
+}
+.portfolio
+{
+	/*TODO*/
+}
